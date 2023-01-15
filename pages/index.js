@@ -1,13 +1,15 @@
 import React from "react";
 import HeadComp from "../component/page/HeadComp";
 import Table from "../component/table";
-import Money from "../component/money";
+import MoneyData from "../component/MoneyData";
 const index = () => {
   return (
-    <div className="lg:w-10/12 mx-auto">
+    <div>
       <HeadComp />
-      <Money />
-      <Table />
+      <MoneyData />
+      <div className="lg:w-10/12 mx-auto pt-10">
+        <Table />
+      </div>
     </div>
   );
 };
