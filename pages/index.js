@@ -8,7 +8,6 @@ const MONEY_API_URL = process.env.NEXT_PUBLIC_MONEY_API;
 
 const index = ({ moneyData }) => {
   // console.log(moneyData);
-
   return (
     <div>
       <HeadComp />
