@@ -2,7 +2,6 @@ import React from "react";
 import Data from "./data.json";
 const table = () => {
   let counter = 1;
-
   return (
     <div>
       <table class="min-w-full text-center">
