@@ -1,6 +1,15 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Data from "./data.json";
+const CUSTOMERS_API_URL = process.env.NEXT_PUBLIC_CUSTOMER_API;
+import axios from "axios";
 const table = () => {
+  const [customersData, setCustomersData] = useState([]);
+  useEffect(() => {
+    axios.get(CUSTOMERS_API_URL).then((res) => {
+      setCustomersData(res.data.data);
+    });
+    // setCustomersData(customersData.reverse());
+  }, []);
   let counter = 1;
   return (
     <div>
@@ -13,18 +22,17 @@ const table = () => {
             >
               #
             </th>
-
-            <th
-              scope="col"
-              class="px-1 py-4 text-xs font-medium text-white lg:text-sm"
-            >
-              التاريخ
-            </th>
             <th
               scope="col"
               class="px-1 py-4 text-xs font-medium text-white lg:text-sm"
             >
               الاسم
+            </th>
+            <th
+              scope="col"
+              class="px-1 py-4 text-xs font-medium text-white lg:text-sm"
+            >
+              التاريخ
             </th>
             <th
               scope="col"
@@ -47,7 +55,7 @@ const table = () => {
           </tr>
         </thead>
         <tbody>
-          {Data.map((item, idx) => {
+          {customersData.map((item, idx) => {
             return (
               idx < 10 && (
                 <tr class="border-b bg-white">
@@ -55,17 +63,16 @@ const table = () => {
                     {counter++}
                   </td>
                   <td class="whitespace-nowrap px-6 py-4 text-sm font-medium text-gray-900">
-                    {item.date}
-                  </td>
-                  <td class="whitespace-nowrap px-6 py-4 text-sm font-medium text-gray-900">
                     {item.name}
                   </td>
                   <td class="whitespace-nowrap px-6 py-4 text-sm font-medium text-gray-900">
-                    {item.hour}
+                    {item.appointment.split("T", 1)}
                   </td>
-
                   <td class="whitespace-nowrap px-6 py-4 text-sm font-medium text-gray-900">
-                    {item.details}
+                    {item.clock}
+                  </td>
+                  <td class="whitespace-nowrap px-6 py-4 text-sm font-medium text-gray-900">
+                    {item.types}
                   </td>
                   <td class="whitespace-nowrap px-6 py-4 text-sm font-medium text-gray-900">
                     {item.price}

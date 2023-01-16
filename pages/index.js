@@ -3,11 +3,10 @@ import HeadComp from "../component/page/HeadComp";
 import Table from "../component/table";
 import MoneyData from "../component/MoneyData";
 import fetch from "isomorphic-unfetch";
-// const API_URL = "https://miral.vercel.app/api/customers";
 const MONEY_API_URL = process.env.NEXT_PUBLIC_MONEY_API;
 
 const index = ({ moneyData }) => {
-  // console.log(moneyData);
+  console.log(moneyData);
   return (
     <div>
       <HeadComp />
@@ -19,8 +18,10 @@ const index = ({ moneyData }) => {
   );
 };
 index.getInitialProps = async () => {
+  // Get Money API
   const resp = await fetch(`${MONEY_API_URL}`);
   const { data } = await resp.json();
+
   return {
     moneyData: data,
   };
