@@ -10,11 +10,6 @@ const CustomerSCH = new mongoose.Schema({
     type: Date,
     min: "2023-01-01",
   },
-  clock: {
-    type: Number,
-    min: 0,
-    max: 24,
-  },
   types: {
     type: String,
     required: false,

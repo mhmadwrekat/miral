@@ -6,12 +6,14 @@
     "start": "next start"
   },
   "dependencies": {
+    "@mui/icons-material": "^5.11.0",
     "axios": "^1.2.2",
     "isomorphic-unfetch": "^4.0.2",
     "mongoose": "^6.8.3",
     "next": "latest",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-icons": "^4.7.1"
   },
   "devDependencies": {
     "@types/node": "18.11.3",
