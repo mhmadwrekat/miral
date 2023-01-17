@@ -10,12 +10,20 @@ const CustomerSCH = new mongoose.Schema({
     type: Date,
     min: "2023-01-01",
   },
+  clock: {
+    type: Number,
+    max: 24,
+  },
   types: {
     type: String,
     required: false,
   },
   price: {
     type: Number,
+  },
+  note: {
+    type: String,
+    required: false,
   },
 });
 module.exports =
