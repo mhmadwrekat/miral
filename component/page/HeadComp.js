@@ -6,7 +6,7 @@ const HeadComp = () => {
     <React.Fragment>
       <Head>
         <title>Miral</title>
-        {/* <link rel="icon" href="/assest/saloon.png" /> */}
+        <link rel="icon" href="/assest/images/profile.jpg" />
         {/* <meta name="keywords" content={head_keywords} /> */}
         {/* <meta name="description" content={head_description} /> */}
         <meta charset="UTF-8" />
