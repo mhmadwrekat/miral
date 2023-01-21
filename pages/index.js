@@ -11,6 +11,7 @@ const index = ({ moneyData }) => {
   return (
     <div dir="rtl">
       <HeadComp />
+
       <MoneyData moneyData={moneyData} />
       <div className="lg:w-10/12 mx-auto pt-2.5">
         <Create />

@@ -1,7 +1,44 @@
+html {
+  scroll-behavior: smooth;
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-html {
-  font-family: "Noto Naskh Arabic";
+@layer base {
+  @font-face {
+    font-family: "TsExtrabold";
+    src: url(../public/fonts/otf/TSTarek-ExtraBold.otf);
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "TsSemibold";
+    src: url(../public/fonts/otf/TSTarek-SemiBold.otf);
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Tsbold";
+    src: url(../public/fonts/otf/TSTarek-Bold.otf);
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "TsMed";
+    src: url(../public/fonts/otf/TSTarek-Medium.otf);
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "TsThin";
+    src: url(../public/fonts/otf/TSTarek-Thin.otf);
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "TsLight";
+    src: url(../public/fonts/otf/TSTarek-Light.otf);
+    font-display: swap;
+  }
 }
