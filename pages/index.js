@@ -10,6 +10,7 @@ const index = ({ moneyData }) => {
   console.log(moneyData);
   return (
     <div dir="rtl">
+      <p className="font-TSbold font-TSSemi text-Orange"></p>
       <HeadComp />
       <MoneyData moneyData={moneyData} />
       <div className="lg:w-10/12 mx-auto pt-2.5">
