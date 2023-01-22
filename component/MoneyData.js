@@ -4,11 +4,10 @@ const MoneyData = ({ moneyData }) => {
   return (
     <h1 className="pt-5 font-TSbold text-Orange text-center text-6xl">
       <b className="text-2xl">💲</b>
-      {moneyData[2].price}
+      {moneyData[0].price}
     </h1>
   );
 };
-
 export default MoneyData;
 
 // import React from "react";
