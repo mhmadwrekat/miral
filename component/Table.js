@@ -106,7 +106,7 @@ const Table = () => {
                 </tr>
               </thead>
               <tbody>
-                {customersData.map((item, idx) => {
+                {customersData.reverse().map((item, idx) => {
                   return (
                     <>
                       <tr key={idx} className="border-b bg-white">
